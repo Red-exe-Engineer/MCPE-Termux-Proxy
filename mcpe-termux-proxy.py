@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-    Createe by Red-exe-Engineer.
+    Created by Red-exe-Engineer.
     Proxy class modofied from https://github.com/MCPI-Revival/proxy.
 """
 import threading, socket, struct
