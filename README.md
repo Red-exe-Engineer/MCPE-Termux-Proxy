@@ -15,7 +15,7 @@ $ mv mcpe-termux-proxy ~/../usr/bin/
 Then you can just run the `mcpe-termux-proxy` command to start whenever it's needed!
 
 ### Adding a server
-Servers are stored in the `~/.mcpe-servers.json` file, if you don't want to figure out how it works just run the program and select `[New]`, then enter the server address, port, and display name.
+Servers are stored in the `~/.mcpe-servers.json` file, if you don't want to figure out how it works just run the program and select `[NEW]`, then enter the server address, port, and display name.
 
 ### Where to find servers
 Join the [MCPI-Revival Discord](https://discord.com/invite/aDqejQGMMy) and check the #mcpi-servers channel.
