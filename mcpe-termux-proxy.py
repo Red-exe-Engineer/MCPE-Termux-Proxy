@@ -9,6 +9,9 @@ import json, time, sys, os
 import termios, tty
 
 
+SERVERS = os.environ["HOME"] + "/.mcpe-servers.json"
+
+
 class Proxy:
     def __init__(self, src_addr, src_port=None, dst_port=None):
         self.__options = {"src_addr": src_addr, "src_port": src_port or 19132, "dst_port": dst_port or 19133}
@@ -104,18 +107,18 @@ def getch() -> str:
 
 
 def load_servers() -> dict:
-    if not os.path.exists("servers.json"):
+    if not os.path.exists(SERVERS):
         save_servers({})
 
     try:
-        with open("servers.json", "r") as file:
+        with open(SERVERS, "r") as file:
             return json.load(file)
     except Exception as error:
         print("Unable to load servers:", str(error))
         return {}
 
 def save_servers(servers):
-    with open("servers.json", "w") as file:
+    with open(SERVERS, "w") as file:
         json.dump(servers, file, indent=4)
 
 
