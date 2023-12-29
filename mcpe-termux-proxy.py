@@ -226,13 +226,12 @@ def main():
             elif action == "Delete":
                 print(f'Deleting \x1b[1m{option}\x1b[0m ({servers[option][0]}:{servers[option][1]})')
 
-                if input(f'Type server name to confirm: ').strip() != option:
-                    continue
+                check = input(f'Type server name to confirm: ').strip()
+                print("\x1b[1A\x1b[2K" * 2, end="\r")
 
-                del servers[option]
-                save_servers(servers)
-
-                print("\x1b[1A\x1b[2K" * 2, end="", flush=True)
+                if check == option:
+                    del servers[option]
+                    save_servers(servers)
 
         elif option == "[NEW]":
             if not (server := new_server()):
