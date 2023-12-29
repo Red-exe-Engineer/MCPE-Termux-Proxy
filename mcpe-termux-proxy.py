@@ -2,7 +2,7 @@
 
 """
     Created by Red-exe-Engineer.
-    Proxy class modofied from https://github.com/MCPI-Revival/proxy.
+    Proxy class modified from https://github.com/MCPI-Revival/proxy.
 """
 import threading, socket, struct
 import json, time, sys, os
