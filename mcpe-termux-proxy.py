@@ -123,7 +123,7 @@ def save_servers(servers):
 
 
 def new_server() -> tuple[str, str, int] | None:
-    def get_string(stage: int, prompt: str, default: str="", valid_keys: str="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@\\^_\""):
+    def get_string(stage: int, prompt: str, default: str="", valid_keys: str="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@\\^_\" "):
         stage_string = " ".join(stages).replace(stages[stage], f'\x1b[1m{stages[stage].upper()}\x1b[0m')
         print(f'[{stage + 1}/3] {stage_string}\n> {stages[stage].title()} {default}', end="", flush=True)
         string = default
@@ -209,7 +209,7 @@ def menu(name: str="Menu", *options) -> str:
             index = min(len(options) - 1, index + 1)
 
         if index != old:
-            print("\r\x1b[2K " + options[old] + "\x1b[1" + "AB"[int(index > old)], f'\r> \x1b[1m{options[index]}', end="", flush=True)
+            print("\r\x1b[2K " + options[old] + "\x1b[1" + "AB"[int(index > old)], f'\r> \x1b[1m{options[index]}\x1b[0m', end="", flush=True)
 
 
 def main():
